@@ -9,6 +9,6 @@ class CarControllerTest {
     public void getCarDetailsTest(){
     CarController controller = new CarController();
     String response = controller.getCarDetails();
-    assertEquals("Toyota", response);
+    assertEquals("Mazda", response);
 }
 }
