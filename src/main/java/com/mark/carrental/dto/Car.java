@@ -8,6 +8,9 @@ import lombok.ToString;
 public class Car {
 
 
+    public Car() {
+    }
+
     int number_of_doors;
     int number_of_wheels;
     int years_old;
@@ -18,6 +21,8 @@ public class Car {
     String shape;
     String make;
     String model;
+
+
 
     public Car(int number_of_doors, int number_of_wheels, int years_old, double enginesize, String colour, String reg_number, String fuel_type, String shape, String make, String model) {
         this.number_of_doors = number_of_doors;
