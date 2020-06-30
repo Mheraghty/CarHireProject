@@ -2,18 +2,88 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Heraghty Travels</title>
+    <style>
+    h1 {
+    text-align: center;
+    color: Blue;
+    font-size: 3em;
+    }
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          text-align: center;
+        }
+        .column {
+        text-align: center;
+        width: 33%;
+        display: inline-block;
+        }
+        .container {
+        width: 1080px;
+        margin: auto;
+    }
+    </style>
 </head>
+
 <body>
-<p th:text="'Make: ' + ${test}" />
-<p th:text="'Number of doors: ' + ${doors}" />
-<p th:text="'Number of wheels: ' + ${wheels}" />
-<p th:text="'Engine size: ' + ${enginesize}" />
-<p th:text="'Colour: ' + ${colour}" />
-<p th:text="'Fuel type: ' + ${fueltype}" />
-<p th:text="'Body type: ' + ${shape}" />
-<p th:text="'Registration number: ' + ${regnumber}" />
-<p th:text="'Model: ' + ${model}" />
-<img th:src="'https://www.motorbiscuit.com/wp-content/uploads/2020/03/1999-Mazda-RX7.jpg'" height="200px" width="200px" />
+<div class="container">
+<h1>Heraghty Travel's</h1>
+<div class="row">
+    <div class="column" >
+        <img th:src="'https://www.motorbiscuit.com/wp-content/uploads/2020/03/1999-Mazda-RX7.jpg'" height="200px" width="200px" alt="Mazda RX-7"/>
+    </div>
+    <div class="column">
+        <img th:src="'https://lh3.googleusercontent.com/proxy/xTJBqfkhVPecLFtIN7stMJd6r1XOm7ByWOmL2LADSbFIX62E05hTUeW28Ex_xr2UCmGR8qOVuNR48fOo12qtJSzwJjTW'" height="200px" width="200px" alt="RX-7 interior" />
+    </div>
+    <div class="column">
+        <img th:src="'https://lh3.googleusercontent.com/proxy/H8V-NVTqusTHJYV_tqGVJAp0p-qgXktl2he4YXO24Bz47wps4UUF8jViin_FT1Meacf0pJ4-Sx7ZDWs0Loz4KUlw'" height="200px" width="200px" alt="RX-7 Engine"/>
+    </div>
+</div>
+<hr>
+    <br>
+    <br>
+<table width="400px" align="left">
+    <tr>
+        <th>Make</th>
+        <td th:text="${test}"></td>
+    </tr>
+    <tr>
+        <th>Model</th>
+        <td th:text="${model}"></td>
+    </tr>
+    <tr>
+        <th>Number of Wheels</th>
+        <td th:text="${wheels}"></td>
+    </tr>
+    <tr>
+        <th>Number of doors</th>
+        <td th:text="${doors}"></td>
+    </tr>
+    <tr>
+        <th>Engine size</th>
+        <td th:text="${enginesize}"></td>
+    </tr>
+    <tr>
+        <th>Colour</th>
+        <td th:text="${colour}"></td>
+    </tr>
+    <tr>
+        <th>Fuel type</th>
+        <td th:text="${fueltype}"></td>
+    </tr>
+    <tr>
+        <th>Body type</th>
+        <td th:text="${shape}"></td>
+    </tr>
+    <tr>
+        <th>Registration number</th>
+        <td th:text="${regnumber}"></td>
+    </tr>
+</table>
+    <br>
+
+</div>
+<p>Description</p>
 </body>
 </html>
