@@ -9,20 +9,83 @@
     color: Blue;
     font-size: 3em;
     }
-        table, th, td {
-          border: 1px solid black;
-          border-collapse: collapse;
-          text-align: center;
-        }
-        .column {
+    table, th, td
+    {
+       border: 2px solid black;
+       border-collapse: collapse;
+       text-align: center;
+    }
+    .column
+    {
         text-align: center;
         width: 33%;
         display: inline-block;
-        }
-        .container {
+    }
+    .container
+    {
         width: 1080px;
         margin: auto;
     }
+    .Description
+    {
+    width: 1080px;
+    margin: auto;
+    font-size: 3em;
+    }
+    .description-info
+    {
+    width: 1080px;
+    margin: auto;
+    border: 2px solid black;
+    text-align: center;
+    }
+    .wrapper
+    {
+    text-align:center;
+    }
+    .button
+    {
+     display: inline-block;
+     border-radius: 4px;
+     background-color: Blue;
+     border: none;
+     color: #FFFFFF;
+     text-align: center;
+     font-size: 28px;
+     padding: 20px;
+     width: 200px;
+     transition: all 0.5s;
+     cursor: pointer;
+     margin: 5px;
+    }
+
+    .button span
+    {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
     </style>
 </head>
 
@@ -30,20 +93,20 @@
 <div class="container">
 <h1>Heraghty Travel's</h1>
 <div class="row">
-    <div class="column" >
+    <div class="column">
         <img th:src="'https://www.motorbiscuit.com/wp-content/uploads/2020/03/1999-Mazda-RX7.jpg'" height="200px" width="200px" alt="Mazda RX-7"/>
     </div>
     <div class="column">
-        <img th:src="'https://lh3.googleusercontent.com/proxy/xTJBqfkhVPecLFtIN7stMJd6r1XOm7ByWOmL2LADSbFIX62E05hTUeW28Ex_xr2UCmGR8qOVuNR48fOo12qtJSzwJjTW'" height="200px" width="200px" alt="RX-7 interior" />
+        <img th:src="'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQu9EGvwvqE3Kq2qmcd8d7tC3nbF_OpmkETOw&usqp=CAU'" height="200px" width="200px" alt="RX-7 interior" />
     </div>
     <div class="column">
-        <img th:src="'https://lh3.googleusercontent.com/proxy/H8V-NVTqusTHJYV_tqGVJAp0p-qgXktl2he4YXO24Bz47wps4UUF8jViin_FT1Meacf0pJ4-Sx7ZDWs0Loz4KUlw'" height="200px" width="200px" alt="RX-7 Engine"/>
+        <img th:src="'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRTIwtI8rk10NAaWl3KC5X_50hWZtNmTHf6hw&usqp=CAU'" height="200px" width="200px" alt="RX-7 Engine"/>
     </div>
 </div>
 <hr>
     <br>
     <br>
-<table width="400px" align="left">
+<table align="center" width="400px">
     <tr>
         <th>Make</th>
         <td th:text="${test}"></td>
@@ -81,9 +144,22 @@
         <td th:text="${regnumber}"></td>
     </tr>
 </table>
-    <br>
-
 </div>
-<p>Description</p>
+<div class="Description">
+    <p>Description</p>
+</div>
+<div class="description-info">
+<p>
+    The Mazda RX-7 is a front/mid-engine, rear-wheel-drive, rotary engine-powered sports car that was manufactured and marketed by Mazda from 1978 to 2002 across three generations,
+    all of which made use of a compact, lightweight Wankel rotary engine. The first generation of the RX-7, SA, was a two-seater coupé.
+</p>
+</div>
+<br>
+<br>
+<div class="wrapper">
+    <button class="button" style="vertical-align:middle"><span>Buy</span></button>
+    <button class="button" style="vertical-align:middle"><span>Rent</span></button>
+</div>
+
 </body>
 </html>
