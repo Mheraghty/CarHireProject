@@ -3,9 +3,11 @@ package com.mark.carrental.dto;
 import lombok.Data;
 import lombok.ToString;
 
+import java.util.List;
+
 @ToString
 @Data
-public class Car {
+public class Car{
 
 
     public Car() {
@@ -20,10 +22,12 @@ public class Car {
     String shape;
     String make;
     String model;
-    String image;
+    List<String> images;
+    String description;
 
 
-    public Car(int number_of_doors, int number_of_wheels, double enginesize, String colour, String reg_number, String fuel_type, String shape, String make, String model, String image) {
+    public Car(int number_of_doors, int number_of_wheels, double enginesize, String colour, String reg_number, String fuel_type, String shape, String make, String model, List<String> images, String description)
+    {
         this.number_of_doors = number_of_doors;
         this.number_of_wheels = number_of_wheels;
         this.enginesize = enginesize;
@@ -33,7 +37,7 @@ public class Car {
         this.shape = shape;
         this.make = make;
         this.model = model;
-        this.image = image;
-
+        this.images = images;
+        this.description = description;
     }
 }
