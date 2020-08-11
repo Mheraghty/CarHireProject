@@ -1,0 +1,30 @@
+    body
+    {
+        background-color: #eae8fc;
+    }
+    h1
+    {
+        text-align: center;
+        color: Blue;
+        font-size: 4em;
+    }
+    iframe
+    {
+       width: 1080px
+       margin: auto;
+       border: 1px solid #ccc;
+       text-align: center;
+    }
+     .column
+     {
+        width: 1080px
+        margin: auto;
+        border: 1px solid #ccc;
+        text-align: center;
+        display: inline-block;
+        padding: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        background-color: white;
+     }
+

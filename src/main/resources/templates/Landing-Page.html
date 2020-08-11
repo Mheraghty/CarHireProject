@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:text-align="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Heraghty Travels</title>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/navigation.css" th:href="@{/css/navigation.css}" />
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/Landing-Page.css" th:href="@{/css/Landing-Page.css}" />
+
 </head>
 <body>
-$END$
+<h1>Heraghty Travel's</h1>
+<div th:replace="navigation">
+</div>
+<aside>
+    <div class="container" id="Cars">
+        <div class="column" th:each="car : ${cars}">
+            <img th:src="${car.images[0]}" height="400px" width="400px"/>
+            <h2 th:text="${car.make}"></h2>
+            <a th:href="@{'/car/details?name='+${car.make}}" class="button" style="vertical-align:middle"><span>More details</span></a>
+        </div>
+    </div>
+</aside>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2320.92911407677!2d-8.452542784127015!3d54.42888490077403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ee16bfb93bec3%3A0x65f7f1a1051ee915!2s15%20Sycamore%20Heights%2C%20Cartronkillerdoo%2C%20Cliffony%2C%20Co.%20Sligo%2C%20F91%20K291!5e0!3m2!1sen!2sie!4v1597017599376!5m2!1sen!2sie" width="600" height="450" frameborder="0" style="border:1;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </body>
 </html>

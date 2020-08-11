@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <title>Heraghty Travels</title>
     <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/navigation.css" th:href="@{/css/navigation.css}" />
+    <link rel="stylesheet" type="text/css" media="all"
           href="../../css/car.css" th:href="@{/css/car.css}" />
 </head>
 
 <body>
 <div class="container">
 <h1>Heraghty Travel's</h1>
+    <div th:replace="navigation">
+    </div>
 <div class="row">
     <div class="column">
         <img th:src="${images[0]}" height="200px" width="200px" />

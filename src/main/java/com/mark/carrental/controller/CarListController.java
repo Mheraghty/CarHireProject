@@ -10,7 +10,7 @@ import java.util.List;
 
 @Controller
 public class CarListController {
-    @GetMapping("/test")
+    @GetMapping("/showroom")
     public String getCarList(Model model)
     {
         ArrayList<Car> cars= new ArrayList<Car>();
