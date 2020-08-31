@@ -8,11 +8,10 @@
         color: Blue;
         font-size: 4em;
     }
-    iframe
+    .iframecontainer
     {
        width: 1080px
        margin: auto;
-       border: 1px solid #ccc;
        text-align: center;
     }
      .column
@@ -26,5 +25,16 @@
         margin-bottom: 20px;
         margin-right: 20px;
         background-color: white;
+     }
+     .welcome
+     {
+     font-size:3em;
+     text-align: center;
+     }
+     p
+     {
+     font-size: 2em;
+     width:100%;
+     text-align:center;
      }
 
